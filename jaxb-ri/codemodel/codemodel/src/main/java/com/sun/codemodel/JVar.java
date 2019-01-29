@@ -177,6 +177,16 @@ public class JVar extends JExpressionImpl implements JDeclaration, JAssignmentTa
         annotations.add(a);
         return a;
     }
+    
+    /**
+     * Remove an annotation from this variable
+     * @param JAnnotationUse the annotation to remove
+     */
+    public void removeAnnotation(JAnnotationUse annotation) {
+    	if (annotations != null) {
+    		annotations.remove(annotation);
+    	}
+    }
 
     /**
      * Adds an annotation to this variable.
